@@ -1,0 +1,19 @@
+{
+  "name": "template_appsscript",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "gcreate": "clasp create --title \"tutorial-vue\" --rootDir ./appsscript",
+    "gdeploys": "clasp deployments",
+    "ghelp": "clasp --help",
+    "glogin": "clasp login",
+    "glogout": "clasp logout",
+    "gopen": "clasp open --webapp",
+    "gpull": "clasp pull",
+    "gpush": "clasp deploy --deploymentId   1jlnU-ooPrw3OOMRFyrgpUeiuPQrXJdPY9-I9lj2jmSWGHXyUkvWRpC9u --versionNumber 0 ",
+    "gstart": "clasp push"
+  },
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.65"
+  }
+}
