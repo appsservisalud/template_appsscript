@@ -18,8 +18,9 @@
 <h2>1) Debes tener instalado nodejs</h2>
 <h2>1) Crear la carpeta donde se alojara el proyecto. Es recomendable que el proyecto tenga una estructura basica</h2>
 
-![Alt text](/src/img/README/root.png)
+![Alt text](/src/img/README/root_proyect.png)
 
+![Alt text](image.png)
 Instalar clasp en el proyecto
 
 ```
