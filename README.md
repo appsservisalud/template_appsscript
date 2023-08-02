@@ -4,6 +4,8 @@
 <h2>PREPARACIÓN DLE LADO DEL SERVIDOR</h2>
 
 ![Imagen de Backend](https://cdn-icons-png.flaticon.com/512/6213/6213731.png)
+
+<h2>CONFIGURACIÓN PREVIA</h2>
 <h2>1) Preparar la función doGet</h2>
 
 Para crear una aplicación web con el servicio HTML, tu código debe incluir una función doGet() que le indique a la secuencia de comandos cómo entregar la página. La función debe mostrar un objeto HtmlOutput, como se muestra en este ejemplo:
@@ -39,6 +41,14 @@ Estructura de la etiqueta
 <?!= include(style.css)?>
 ```
 <h2>1) Archivos estaticos (Imagenes y videos)</h2>
+En alguna carpeta de Google drive. Autenticadas con la cuenta de nuestro proyecto Appsscript. Organizamos los archivos estaticos (Fotos,iconos y videos).
+Luego le damos en compartir. Ubicamos el enlace y extraemos el id unico del objeto multimedia. Ese Id unico lo colocamos de la siguiente forma en el atributo src de la etiqueta img o video.
+
+```
+<img src="https://drive.google.com/uc?export=download&id=1lnwLYGa3_CvRzXOF62jMjZO5yfl1rUCf" id="person-img" alt="" />
+```
+
+```
 <h2>2) Estilos css (Propios o en framework)</h2>
 <h2>1) Tag de appscript para llamar funciones o inyectar codigo en el template desde el servidor</h2>
 
