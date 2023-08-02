@@ -1,3 +1,11 @@
+<em><h1>¿QUE HACER ANTES DE EMPEZAR UN PROYECTO EN APPSSCRIPT?</h1></em>
+
+<h2>1) Preparar la función doGet</h2>
+<h2>1) Archivos estaticos (Imagenes y videos)</h2>
+<h2>2) Estilos css (Propios o en framework)</h2>
+<h2>1) Tag de appscript para llamar funciones o inyectar codigo en el template desde el servidor</h2>
+
+
 <em><h1>COMO LLEVAR A PRODUCCIÓN CON CLASP + APPSSCRIPT</h1></em>
 
 ![Logo de apps script](https://hiviewsolutions.com/wp-content/uploads/2021/07/Apps-Script-min.png)
@@ -20,7 +28,7 @@
 
 ![Alt text](/src/img/README/root_proyect.png)
 
-![Alt text](image.png)
+
 Instalar clasp en el proyecto
 
 ```
