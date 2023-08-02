@@ -1,6 +1,28 @@
 <em><h1>¿QUE HACER ANTES DE EMPEZAR UN PROYECTO EN APPSSCRIPT?</h1></em>
 
 <h2>1) Preparar la función doGet</h2>
+
+Servimos el html de la siguiente forma:
+```
+function doGet(){
+  return HtmlService.createTemplateFromFile('Index').evaluate();
+}
+```
+<h2>1) Preparar la función include</h2>
+
+Servimos código estatico de la siguiente forma:
+```
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+```
+<h2>1) Preparar los scriptlet ( Para incluir contenido o configurar valores estáticos)</h2>
+
+Estructura de la etiqueta
+```
+<? Código ?>
+```
+
 <h2>1) Archivos estaticos (Imagenes y videos)</h2>
 <h2>2) Estilos css (Propios o en framework)</h2>
 <h2>1) Tag de appscript para llamar funciones o inyectar codigo en el template desde el servidor</h2>
@@ -43,6 +65,7 @@ Para que reconozca la sintaxis de appsscript
 ```
 npm i -S @types/google-apps-script
 ```
+
 
 Para subir los cambios locales al escritorio remoto tendremos dos opciones:
 
