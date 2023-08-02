@@ -1,4 +1,6 @@
-<em><h1>¿QUE HACER ANTES DE EMPEZAR UN PROYECTO EN APPSSCRIPT?</h1></em>
+![Logo de apps script](https://hiviewsolutions.com/wp-content/uploads/2021/07/Apps-Script-min.png)
+
+<em><h1>PROYECTO EN APPSSCRIPT</h1></em>
 
 
 <h2>PREPARACIÓN DLE LADO DEL SERVIDOR</h2>
@@ -32,7 +34,7 @@ function include(filename) {
 
 Estructura de la etiqueta
 ```
-<?!= include(style.css)?>
+<?!= include(style.html)?>
 ```
 <h2>2) Archivos estaticos (Imagenes y videos)</h2>
 En alguna carpeta de Google drive. Autenticadas con la cuenta de nuestro proyecto Appsscript. Organizamos los archivos estaticos (Fotos,iconos y videos).
@@ -58,9 +60,7 @@ Asi podemos colocar nuestros propios estilos. Aunque puede optar por un CDN para
 </style>
 ```
 
-<em><h1>COMO LLEVAR A PRODUCCIÓN CON CLASP + APPSSCRIPT</h1></em>
-
-![Logo de apps script](https://hiviewsolutions.com/wp-content/uploads/2021/07/Apps-Script-min.png)
+<em><h1>CONTROL DE VERSIONES Y PUSH DE LOCAL A REMOTO CON "CLASP + APPSSCRIPT"</h1></em>
 
 
    <p align="left">
