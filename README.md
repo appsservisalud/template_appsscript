@@ -1,28 +1,34 @@
 <em><h1>¿QUE HACER ANTES DE EMPEZAR UN PROYECTO EN APPSSCRIPT?</h1></em>
 
+<h2>Preparacion del lado del servidor</h2>
 <h2>1) Preparar la función doGet</h2>
 
-Servimos el html de la siguiente forma:
+Para crear una aplicación web con el servicio HTML, tu código debe incluir una función doGet() que le indique a la secuencia de comandos cómo entregar la página. La función debe mostrar un objeto HtmlOutput, como se muestra en este ejemplo:
 ```
 function doGet(){
   return HtmlService.createTemplateFromFile('Index').evaluate();
 }
 ```
-<h2>1) Preparar la función include</h2>
+<h2>2) Preparar la función include</h2>
 
-Servimos código estatico de la siguiente forma:
+Servimos código estatico con la siguiente función:
 ```
 function include(filename) {
   return HtmlService.createHtmlOutputFromFile(filename).getContent();
 }
 ```
+Una aplicación muy util de la anterior función. Es para inyectar css en el html. Siempre y cuando se haga dentro la etiqueta <style></style> y ayudados con un scriplet.
+```
+<style>
+<?!= include(style.css)?>
+</style>
+```
 <h2>1) Preparar los scriptlet ( Para incluir contenido o configurar valores estáticos)</h2>
 
 Estructura de la etiqueta
 ```
-<? Código ?>
+<?!= include(style.css)?>
 ```
-
 <h2>1) Archivos estaticos (Imagenes y videos)</h2>
 <h2>2) Estilos css (Propios o en framework)</h2>
 <h2>1) Tag de appscript para llamar funciones o inyectar codigo en el template desde el servidor</h2>
