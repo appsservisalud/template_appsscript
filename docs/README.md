@@ -1,9 +1,18 @@
 ![Logo de apps script](https://hiviewsolutions.com/wp-content/uploads/2021/07/Apps-Script-min.png)
 
-<em><h1>PROYECTO EN APPSSCRIPT</h1></em>
 
 
-<h2>PREPARACIÓN DLE LADO DEL SERVIDOR</h2>
+<em><h1>¿COMO CREAR UN PROYECTO EN APPSSCRIPT?</h1></em>
+
+   <p align="left">
+   <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+   </p>
+
+
+Metodologia para crear un proyecto en Appsscript con JavaScript vanilla, Css3 y Html5 con un control de versiones en Clasp y NodeJs.
+
+
+<h2>PREPARACIÓN DEL LADO DEL SERVIDOR</h2>
 
 ![Imagen de Backend](https://cdn-icons-png.flaticon.com/512/6213/6213731.png)
 
@@ -46,7 +55,8 @@ Luego le damos en compartir. Ubicamos el enlace y extraemos el id unico del obje
 <h2>3) Estilos css (Propios o en framework)</h2>
 
 Una aplicación muy util del siguiente scriplet es llamar desde el cliente una función del lado del servidor. Luego inyecta css en el html. Para que se cargue en la pagina html. Siempre y cuando se haga dentro la etiqueta <style></style> y el archivo que incluye el código css sea con la extensión html y esté en el proyecto.
-Asi podemos colocar nuestros propios estilos. Aunque puede optar por un CDN para cargar una bibloteca de estilos o un Framework Css.
+Asi podemos colocar nuestros propios estilos. Aunque puede optar por un CDN para cargar una bibloteca de estilos o un Framework Css. El CDN puede ser cargado en una
+etiqueta `<Link>` dentro del `<head>` del html.
 
 ```
 <!--Estilos desde CDN-->
@@ -63,46 +73,61 @@ Asi podemos colocar nuestros propios estilos. Aunque puede optar por un CDN para
 <em><h1>CONTROL DE VERSIONES Y PUSH DE LOCAL A REMOTO CON "CLASP + APPSSCRIPT"</h1></em>
 
 
-   <p align="left">
-   <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
-   </p>
-
-
 <h2>Configuración principal</h2>
 
 ![Ajustes](https://definicion.de/wp-content/uploads/2016/11/configuracion.png)
 
-<h2>1) Debes tener instalado nodejs</h2>
-<h2>2) Crear la carpeta donde se alojara el proyecto. Es recomendable que el proyecto tenga una estructura basica</h2>
+### 1. Debes tener instalado nodejs (Servidor escrito en JavaScript)
+
+[Enlace de descarga de Nodejs](https://nodejs.org/es/download)
+
+### 2. Crear la carpeta donde se alojara el proyecto. Es recomendable que el proyecto tenga una estructura basica.
 
 ![Alt text](/src/img/README/root_proyect.png)
 
 
-Instalar clasp en el proyecto
+### 3. Instalar clasp en el proyecto
 
 ```
 npm install @google/clasp -g
 ```
-Iniciar sesión para darle permisos en appsscript a clasp
-
+### 4. Iniciamos sesión para dar permisos en appsscript a clasp. Le damos permitir.
 ```
 clasp login
 ```
-Para que reconozca la sintaxis de appsscript
+
+![Autorización a Clasp](https://github.com/appsservisalud/template_appsscript/assets/108880293/8e883c06-11dc-423c-9397-39841a80f934)
+
+
+
+### 5.  Clonamos nuestro proyecto en local
+
+Pulsamos en el botón Permitir y ya podemos cerrar la página web y volver al terminal. Creamos una carpeta contenedora del proyecto, en mi caso mi-aplicacion-web y clonamos el proyecto con clasp.
+
+```
+1. mkdir mi-aplicacion-web
+2. clasp clone <script_id>
+```
+
+## 5.1 ¿Donde encontramos el Script_id?
+![Script_id](https://github.com/appsservisalud/template_appsscript/assets/108880293/92686065-2d82-4606-8473-4c22d3043320)
+
+
+
+### 6. Instalamos lo siguiente para que Visual studio code reconozca la sintaxis de appsscript del lado del servidor.
 ```
 npm i -S @types/google-apps-script
 ```
+### 7. Con el siguiente comando subimos los cambios locales al proyecto remoto de appsscript. De forma predeterminada los cambios
+se suben en el `<HEAD>` "Cabecera principal". Para ello tendremos dos opciones:
 
-
-Para subir los cambios locales al escritorio remoto tendremos dos opciones:
+ * 7.1 Con la opción -w (o –watch) dejamos al cliente que escuche todos nuestros cambios en local para que cuando los guardemos en local se sincronice con lo que hay en remoto.
 
 ```
 clasp push -w
 ```
-Con la opción -w (o –watch) dejamos al cliente que escuche todos nuestros cambios en local para que cuando los guardemos en local se sincronice con lo que hay en remoto.
 
-O sin monitoreo
-
+  * 7.2 Sin monitoreo
 ```
 clasp push
 ```
