@@ -70,7 +70,7 @@ Luego le damos en compartir. Ubicamos el enlace y extraemos el id unico del obje
 ```
 <h2>3) Estilos css (Propios o en framework)</h2>
 
-Una aplicación muy util del siguiente scriplet es llamar desde el cliente una función del lado del servidor. Luego inyecta css en el html. Para que se cargue en la pagina html. Siempre y cuando se haga dentro la etiqueta <style></style> y el archivo que incluye el código css sea con la extensión html y esté en el proyecto.
+Una aplicación muy util del siguiente scriplet es llamar desde el cliente una función del lado del servidor. Luego inyecta el  `CSS` en el `HTML`. Para que se cargue en la pagina html. Siempre y cuando se haga dentro la etiqueta `<style></style>` y el archivo que incluye el código `CSS` sea con la extensión `HTML` y esté en el proyecto.
 Asi podemos colocar nuestros propios estilos. Aunque puede optar por un CDN para cargar una bibloteca de estilos o un Framework Css. El CDN puede ser cargado en una
 etiqueta `<Link>` dentro del `<head>` del html.
 
@@ -91,9 +91,13 @@ etiqueta `<Link>` dentro del `<head>` del html.
 ![Frontend-Backend](https://github.com/appsservisalud/template_appsscript/assets/108880293/3aabc5c6-39eb-4c84-8531-b2d98b7f2a76)
 
 
-   * 4.1 Dentro de la etiqueta `<script></script>` al final del archivo `Html` desarrollamos nuestro código en Java Script Vanilla o nos ayudmos de alguna libreria como 
-        `Jquery`. Aqui podemos interectuar con los elementos del `DOM`. Preparar los datos para enviarlos al servidor mediante la API asincronica `google.script.run` con 
+   * 4.1 Dentro de la etiqueta `<script></script>` al final del archivo `Html` desarrollamos nuestro código en Java Script Vanilla o nos ayudamos de alguna libreria como 
+        `Jquery`. Aqui podemos interectuar con los elementos del `DOM`. Preparar los datos para enviarlos al servidor mediante la API asincrona `google.script.run` con 
          sus respectivos controladores de exito `withSuccessHandler(function)` y falla `withFailureHandler(function)` para una mayor control de la ejecución.
+     
+   * 4.2 NOTA: `google.script.run` es una API de JavaScript asíncrona del cliente que permite que las páginas de servicios HTML llamen a funciones de Apps Script en el 
+     servidor. Las llamadas del cliente a las funciones del lado del servidor son asíncronas: después de que el navegador solicita que el servidor ejecute la función 
+     `function example()`, el navegador continúa inmediatamente en la siguiente línea de código sin esperar una respuesta.
 
 <em><h1>CONTROL DE VERSIONES Y PUSH DE LOCAL A REMOTO CON "CLASP + APPSSCRIPT"</h1></em>
 
