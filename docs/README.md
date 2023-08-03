@@ -159,3 +159,11 @@ clasp push -w
 ```
 clasp push
 ```
+
+## Autores
+
+| [<img src="https://drive.google.com/uc?export=download&id=1-FbDF-1Jt0C8r4537w79-1hkyavLBypp" width=115><br><sub>David martinez</sub>](https://github.com/ldadev)
+
+
+
+
