@@ -12,7 +12,7 @@
 Metodologia para crear un proyecto en Appsscript con JavaScript vanilla, Css3 y Html5 con un control de versiones en Clasp y NodeJs.
 
 
-<h2>PREPARACIÓN DEL LADO DEL SERVIDOR</h2>
+<h2>PREPARACIÓN DEL LADO DEL SERVIDOR EN LOS ARCHIVOS CON EXTENSIÓN ".GS"</h2>
 
 ![Imagen de Backend](https://cdn-icons-png.flaticon.com/512/6213/6213731.png)
 
@@ -33,6 +33,22 @@ function include(filename) {
   return HtmlService.createHtmlOutputFromFile(filename).getContent();
 }
 ```
+<h2>3) Preparar la funciones que reciben los datos del cliente</h2>
+
+![Funciones del backend](https://github.com/appsservisalud/template_appsscript/assets/108880293/68b5c5fc-8b5a-4688-a69a-6f03c0056edc)
+
+Preparamos las funciones que reciben los datos del cliente. Estas funciones pueden retornar datos y enviarlos al cliente ó pueden
+ser usados para procesos internos con hojas de calculo, texto ó gmail.
+
+```
+function get_data(form)
+     {
+       new_user = form.user + '-'
+       return new_user
+     }
+```
+ 
+
 
 <h2>PREPARACIÓN DEL LADO DEL CLIENTE</h2>
 
@@ -69,6 +85,15 @@ etiqueta `<Link>` dentro del `<head>` del html.
 <?!= include(style.html)?>
 </style>
 ```
+
+<h2>4) ¿COMO INTERACTUAR CON EL DOM Y EL SERVIDOR?</h2>
+
+![Frontend-Backend](https://github.com/appsservisalud/template_appsscript/assets/108880293/3aabc5c6-39eb-4c84-8531-b2d98b7f2a76)
+
+
+   * 4.1 Dentro de la etiqueta `<script></script>` al final del archivo `Html` desarrollamos nuestro código en Java Script Vanilla o nos ayudmos de alguna libreria como 
+        `Jquery`. Aqui podemos interectuar con los elementos del `DOM`. Preparar los datos para enviarlos al servidor mediante la API asincronica `google.script.run` con 
+         sus respectivos controladores de exito `withSuccessHandler(function)` y falla `withFailureHandler(function)` para una mayor control de la ejecución.
 
 <em><h1>CONTROL DE VERSIONES Y PUSH DE LOCAL A REMOTO CON "CLASP + APPSSCRIPT"</h1></em>
 
@@ -118,8 +143,7 @@ Pulsamos en el botón Permitir y ya podemos cerrar la página web y volver al te
 ```
 npm i -S @types/google-apps-script
 ```
-### 7. Con el siguiente comando subimos los cambios locales al proyecto remoto de appsscript. De forma predeterminada los cambios
-se suben en el `<HEAD>` "Cabecera principal". Para ello tendremos dos opciones:
+### 7. Con el siguiente comando subimos los cambios locales al proyecto remoto de appsscript. De forma predeterminada los cambios se suben en el  `<HEAD>` "Cabecera principal". Para ello tendremos dos opciones:
 
  * 7.1 Con la opción -w (o –watch) dejamos al cliente que escuche todos nuestros cambios en local para que cuando los guardemos en local se sincronice con lo que hay en remoto.
 
